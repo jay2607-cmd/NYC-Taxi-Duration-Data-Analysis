@@ -14,21 +14,21 @@ We created visualizations to explore relationships between trip duration and oth
 
 Data preparation involved several key steps. Each column’s data type was converted to appropriate formats such as integer, double, string, or timestamp. We computed distances between pickup and drop-off coordinates for all trips. Assuming typical NYC taxi trips do not exceed two hours, we filtered out durations outside the range of 3 minutes to 2 hours. Similarly, trips beyond 60 kilometers were excluded, as taxis typically avoid long-distance routes. Additional preprocessing steps were implemented to refine the dataset for modeling.
 
-![Preprocessing Diagram](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.001.png)
+![Preprocessing Diagram](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.001.png)
 
-![Data Cleanup](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.002.png)
+![Data Cleanup](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.002.png)
 
 **III. Data Visualization**
 
 We created various visualizations to extract insights from the data. For example, total trips peak on Fridays and Saturdays, while average passenger counts are highest on Sundays, likely due to family outings. Trip durations are generally shorter on weekends, reflecting reduced traffic, though distances tend to be longer for leisure travel.
 
-![Weekly Patterns](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.003.png)
+![Weekly Patterns](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.003.png)
 
-![Trip Duration Trends](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.004.png)
+![Trip Duration Trends](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.004.png)
 
 Distance is a key variable for trip duration predictions. Our analysis shows that approximately 70% of trips cover less than 10 kilometers and take under 2000 seconds (about 30 minutes). This compact distribution suggests outliers, as a few trips exhibit unusually high durations and distances.
 
-![Distance vs. Duration](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.005.png)
+![Distance vs. Duration](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.005.png)
 
 **IV. Algorithms**
 
@@ -44,9 +44,9 @@ Outlier removal was crucial for effective modeling. We converted categorical var
 
 Using scikit-learn’s KMeans, we identified patterns by grouping similar data points. The Elbow method determined the optimal number of clusters (k = 4). Cluster analysis revealed feature influences on trip duration, with additional box plots and radar charts providing a clear view of distribution patterns.
 
-![Elbow Method](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.006.png)
+![Elbow Method](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.006.png)
 
-![Cluster Analysis](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.007.png)
+![Cluster Analysis](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.007.png)
 
 **V. Results**
 
@@ -54,19 +54,19 @@ Using scikit-learn’s KMeans, we identified patterns by grouping similar data p
 
 Optimized parameters yielded 50.23% accuracy with an RMSE of 500.76. Below are the best parameters, coefficients, and intercept for the linear model:
 
-![Linear Regression Results](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.008.png)
+![Linear Regression Results](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.008.png)
 
 **II. Gradient-Boosted Trees Regression**
 
 This model achieved approximately 75% accuracy with an RMSE of 362.1. Gradient-boosted trees significantly outperformed linear regression in predictive power.
 
-![GBT Results](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.009.png)
+![GBT Results](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.009.png)
 
 **III. K-Means Clustering**
 
 Despite challenges in cluster differentiation, we identified meaningful patterns and generated a radar plot to visualize key cluster characteristics:
 
-![Radar Plot](Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.010.png)
+![Radar Plot](~/Documents/Aspose.Words.aba6c92a-e782-445b-b727-2cf5eb96087d.010.png)
 
 **VI. Discussion**
 
@@ -75,7 +75,6 @@ While 75% accuracy from the gradient-boosted trees model shows room for improvem
 **Future Work**
 
 1. **Cloud-Based Resources**: Utilizing AWS or GCP will allow for more extensive model tuning and scalability.
-1. **Real-Time Data Integration**: Incorporating live data through APIs and building continuous learning pipelines will enhance predictive accuracy over time.
+2. **Real-Time Data Integration**: Incorporating live data through APIs and building continuous learning pipelines will enhance predictive accuracy over time.
 
 This project demonstrates valuable insights into NYC taxi trips and highlights opportunities for further development in predictive modeling for urban transportation.
-
